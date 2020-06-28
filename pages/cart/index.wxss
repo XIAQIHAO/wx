@@ -1,0 +1,5 @@
+/* pages/cart/index.wxss */
+/* 收货地址 */
+.address_btn{
+  padding: 20rpx 0;
+}

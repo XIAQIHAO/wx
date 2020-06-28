@@ -1,0 +1,102 @@
+/* pages/goods_detail/index.wxss */
+/* 轮播图 */
+.detail_index swiper {
+  height: 50vh;
+  text-align: center;
+}
+
+.detail_index swiper image {
+  width: 70%;
+  height: 100%;
+}
+
+/* 轮播图 */
+/* 商品详情 */
+.goods_info .goods_price text {
+  color: red;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.goods_info .goods_price text::before {
+  content: "￥";
+  display: inline;
+}
+
+.goods_mes {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  
+}
+
+.goods_mes .goods_title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 80rpx;
+  
+  overflow: hidden;
+  flex: 6;
+  border-right: 3rpx solid slategray;
+}
+
+.goods_mes .goods_like {
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding-right: 20rpx;
+}
+
+.goods_like image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.good_info_title{
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: red;
+  font-weight: bold;
+}
+/* 商品详情 */
+
+
+/* 底部操作 */
+.handle_index{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+background-color: #fff;
+box-shadow: 0 0 10rpx black;
+}
+.handle_wrap{
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+}
+.handle_kefu,.handle_gouwuche,.handle_fenxiang{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.add_shop,.buy_shop{
+  flex: 3;
+  font-size: 30rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_shop{
+  background-color: #FFA500;
+}
+.buy_shop{
+  background-color: #F4564D;
+}

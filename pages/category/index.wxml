@@ -1,0 +1,29 @@
+<!--pages/category/index.wxml-->
+<view class="category_index">
+<Search></Search>
+
+<view class="shop_index">
+<scroll-view scroll-y="true" scroll-with-animation="true"  class="shop_nav"> 
+<view bindtap="bnclick" wx:for="{{category}}" wx:key="index" class="{{index===num?'active':''}}" data-setindex="{{index}}">
+{{item.cat_name}}
+</view>
+</scroll-view>
+<scroll-view scroll-top="{{scrolltop}}" scroll-y   scroll-with-animation="true" class="shop_show" >
+<view>
+<view wx:for="{{category[num].children}}" wx:key="index1" wx:for-item="item1">
+    <view class="shop_title">/      {{item1.cat_name}}     /</view>
+    <view class="shop_list">
+    <view class="list_wrap" wx:for="{{item1.children}}" wx:key="index2" wx:for-item="item2">
+       <navigator url="/pages/goodes_list/index?id={{item2.cat_id}}">
+        <view class="list_box">
+        <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+        <view class="list_text">{{item2.cat_name}}</view>
+        </view>
+       </navigator>
+    </view>
+    </view>
+</view>
+</view>
+</scroll-view>
+</view>
+</view>

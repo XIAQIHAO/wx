@@ -1,0 +1,43 @@
+/* pages/category/index.wxss */
+.category_index{
+  height: 100vh;
+}
+.shop_index{
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+.shop_nav{
+  flex: 2;
+  height: 100%;
+  background-color: ghostwhite;
+}
+.shop_show{
+  flex: 6;
+  height: 100%;
+  padding-top: 40rpx;
+}
+.shop_nav view{
+  line-height: 90rpx;
+  height: 80rpx;
+}
+
+.active{
+  background-color: #A0C5E8;
+  color: white;
+}
+
+.shop_list{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.list_box image{
+  width: 100%;
+  
+}
+.list_wrap{
+  width: 28%;
+  padding: 10rpx 0;
+}

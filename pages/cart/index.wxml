@@ -1,0 +1,8 @@
+<!--pages/cart/index.wxml-->
+<!-- 收货地址 -->
+<view class="address_index">
+  <view class="address_btn">
+    <button type="primary" plain bindtap="getadress">获取收货地址</button>
+  </view>
+</view>
+

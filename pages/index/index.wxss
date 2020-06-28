@@ -1,0 +1,62 @@
+/*轮播图开始 */
+swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+
+swiper image {
+  width: 100%;
+}
+
+/* 轮播图结束 */
+/* 导航开始 */
+.nav_wrap {
+  padding-top: 10rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_wrap>view {
+  flex: 1;
+  text-align: center;
+}
+
+.nav_wrap>view image {
+  width: 70%;
+  height: 140rpx;
+}
+
+/* 导航结束 */
+
+/* 产品展示开始 */
+.production_index,.production_index>view{
+  padding: 10rpx 0;
+}
+.production_index>view>image{
+  width: 100%;
+  height: 200rpx;
+}
+.prod_wrap{
+  overflow: hidden;
+}
+.prod_wrap image{
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+}
+.prod_wrap>image:first-child{
+  border-left: 10rpx #ffffff solid;
+  height:400rpx;
+}
+.prod_wrap>image:not(:first-child){
+      height:200rpx;
+      border-left: 10rpx #ffffff solid;
+}
+.prod_wrap>image:nth-child(2),.prod_wrap>image:nth-child(3){
+  border-bottom: 10rpx solid #ffffff;
+}
+.prod_wrap>image:nth-child(5),.prod_wrap>image:nth-child(3){
+  border-right: 10rpx solid #ffffff;
+}
+
+/* 产品展示结束 */

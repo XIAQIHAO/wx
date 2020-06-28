@@ -1,0 +1,16 @@
+.search_index{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  background-color: #F8554D;
+}
+.search_index > navigator{
+  width: 98%;
+  height:60rpx;
+  line-height: 60rpx;
+  background-color: #ffffff;
+  color: darkblue;
+  text-align: center;
+  border-radius: 15rpx;
+}

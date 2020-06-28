@@ -1,0 +1,43 @@
+<view class="shop_index">
+	<!-- 搜索框 -->
+	<Search></Search>
+	<!-- 轮播图 -->
+  <!-- 
+    1.swiper标签存在默认宽度和高度100%和150px
+    2.image标签也存在默认的宽度和高度320px*150px
+    3.设计图片和轮播图
+      1.先看一下原图的宽高 750*340
+      2.让图片的高度自适应 宽度等于100%
+      3.swiper的高度就设置成750*340
+    4.图片标签
+      mode属性 渲染模式
+        widthFix 让图片的标签宽高和图片标签的内容自适应
+   -->
+	<view class="siper_index">
+		<swiper  indicator-dots="true" autoplay="true" circular="true">
+			<navigator hover-class="none">
+				<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+					<image src="{{item.image_src}}" mode="widthFix"></image>
+				</swiper-item>
+			</navigator>
+		</swiper>
+	</view>
+	<!-- 导航开始 -->
+	<view class="nav_wrap">
+			<view wx:for="{{NavList}}" wx:key="name">
+			<navigator hover-class="none"  url="../category/index" 	open-type="switchTab"><image mode="widthFix" src="{{item.image_src}}"></image></navigator>
+			</view>
+	</view>
+	<!-- 导航结束 -->
+
+	<!-- 产品介绍 -->
+	<view class="production_index">
+		<!-- 三个模块模块 -->
+				<view class="prod_title" wx:for="{{prodList}}" wx:key="floor_title">
+							<image src="{{item.floor_title.image_src}}" mode="widthFix" class="title_img"></image>
+							<view class="prod_wrap">
+								<image mode="{{index2===0?'widthFix':'scaleToFill'}}" wx:for="{{item.product_list}}" wx:key="index" wx:for-index="index2"  wx:for-item="item1" src="{{item1.image_src}}"></image>
+							</view>
+				</view>
+	</view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/goodes_list/index.wxml-->
+<view class="goods_list">
+  <SearchInput></SearchInput>
+  <Tabs Tabs="{{Tabs}}" bind:showcase="showcase">
+    <view wx:if="{{Tabs[0].active}}" class="good_list">
+        
+           <scroll-view scroll-y>
+            <view class="good_list" wx:for="{{good_list}}" wx:key="goods_id">
+            <navigator class="good_nav" hover-class="none" open-type="navigate" url="../goods_detail/index?goods_id={{item.goods_id}}">
+            <view class="good_img">
+            <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+            </view>
+            <view class="good_info">
+            <view class="good_wenzi">{{item.goods_name}}</view>
+            <view class="good_price">￥{{item.goods_price}}</view>
+            </view>
+                </navigator>
+            </view>
+           </scroll-view>
+       
+     
+    </view>
+     <view wx:elif="{{Tabs[1].active}}">1</view>
+      <view wx:else="{{Tabs[2].active}}">2</view>
+  </Tabs>
+</view>
+

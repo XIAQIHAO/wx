@@ -1,0 +1,51 @@
+<!--pages/goods_detail/index.wxml-->
+<view class="detail_index">
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+         <swiper-item wx:for="{{ goodList.pics}}" wx:key="index" bindtap="btnclick" data-urls="{{item.pics_mid}}">  
+              <image mode="widthFix" src="{{item.pics_mid}}"></image>
+         </swiper-item>
+      </swiper>
+      <view class="goods_info">
+      <view class="goods_price">
+        <text class="price">{{goodList.goods_price}}</text>
+      </view>
+      <view class="goods_mes">
+      <view class="goods_title">
+      {{goodList.goods_name}}
+      </view>
+      <view class="goods_like" wx:if="{{curr}}">
+            <view><image src="../../images/收藏.png"></image></view>
+            <view>收藏</view>
+      </view>
+      </view>
+      </view>
+</view>
+<view class="good_info">
+<view class="good_info_title">
+图文详情
+</view>
+<view class="good_info_content">
+<!-- 把字符串标签渲染为dom -->
+<rich-text nodes="{{goodList.goods_introduce}}"></rich-text>
+</view>
+</view>
+<view class="handle_index">
+      <view class="handle_wrap">
+            <view class="handle_kefu">
+      <view class="iconfont icon-kefu"></view>
+      <view>客服</view>
+      </view>
+       <view class="handle_fenxiang">
+       <view class="iconfont icon-fenxiang"></view>
+       <view>分享</view>
+       </view>
+        <view class="handle_gouwuche">
+        <view class="iconfont icon-gouwuche"></view>
+       <view>
+       
+       购物车</view>
+        </view>
+         <view class="add_shop"><view bindtap="addshop">加入购物车</view></view>
+          <view class="buy_shop"><view>立即购买</view></view>
+      </view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/SearchInput/SearchInput.wxml-->
+<view class="search_index">
+      <navigator url="../../pages/search/index" hover-class="none">搜索</navigator>
+</view>
