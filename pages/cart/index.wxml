@@ -5,4 +5,28 @@
     <button type="primary" plain bindtap="getadress">获取收货地址</button>
   </view>
 </view>
+<view class="shop_index">
+      <view class="shop_title">购物车</view>
+      <view class="cart_wrap">
+        <view class="cart_btn">
+        
+           <checkbox-group bindchange="checkboxChange">
+              <checkbox checked="true"/>
+        </checkbox-group>
+
+        </view>
+        <view class="cart_info">
+            <view class="cart_image">
+           <view>
+            <image src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000193373779_1_400x400.jpg" ></image>
+           </view>
+            </view>
+           
+        </view>
+         <view class="cart_content">
+            <view class="cart_title"></view>
+            <view class="cart_price"></view>
+            </view>
+      </view>
+</view>
 

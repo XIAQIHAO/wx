@@ -3,3 +3,35 @@
 .address_btn{
   padding: 20rpx 0;
 }
+
+
+/* 购物车模块 */
+.shop_index .shop_title{
+  padding: 20rpx;
+  border-top: 3rpx solid red;
+  border-bottom: 3rpx solid red;
+  font-size: 35rpx;
+}
+.cart_wrap{
+  display: flex;
+  border-bottom: 2rpx solid #E6DFD9;
+  height: 220rpx;
+  overflow: hidden;
+}
+.cart_wrap .cart_btn{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_wrap .cart_image{
+  flex: 4;
+}
+.cart_wrap .cart_image image{
+  width: 220rpx;
+  height: 220rpx;
+ 
+}
+.cart_wrap .cart_content{
+  flex: 8;
+}
