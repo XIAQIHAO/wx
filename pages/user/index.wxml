@@ -1,2 +1,58 @@
 <!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="login_btn" wx:if="{{!userinfo.nickName}}">
+	<button type="primary" plain>
+		<navigator url="../login/index" open-type="navigate">登录</navigator>
+	</button>
+</view>
+
+<view class="user_index" wx:else>
+	<view class="bg_wrap">
+		<image src="{{userinfo.avatarUrl}}" class="bgicon"></image>
+	</view>
+	<image src="{{userinfo.avatarUrl}}" class="icon"></image>
+	<view class="user_name">用户：{{userinfo.nickName}}
+	</view>
+	<view class="cart_info">
+
+		<view class="cart_index">
+		
+			<view wx:for="{{shop}}" wx:key="index" class="cart_item">
+			<navigator open-type="navigate" url="{{item.url}}">
+				<view style="color:red;">{{item.num}}</view>
+				<view>{{item.name}}</view>
+	</navigator>
+			</view>
+	
+		</view>
+
+	</view>
+</view>
+<view class="my_shop">
+	<view class="shop_wrap">
+		<!-- 我的订单 -->
+		<view class="orders">
+			<view class="title">我的订单</view>
+		</view>
+		<view class="status">
+			<view class="status_wrap" wx:for="{{orders}}" wx:key="index">
+				<view>
+					<image src="{{item.image}}"></image>
+				</view>
+				<view>{{item.title}}</view>
+			</view>
+
+		</view>
+		<view class="item"></view>
+		<view class="manage">
+			收货地址管理
+		</view>
+		<view class="item"></view>
+
+		<view class="kefu">
+			<view>联系客服</view>
+			<view>400-618-40000</view>
+		</view>
+		<view class="mess">意见反馈</view>
+		<view class="about">关于我们</view>
+	</view>
+</view>

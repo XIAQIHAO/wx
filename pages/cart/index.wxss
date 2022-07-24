@@ -1,37 +1,202 @@
 /* pages/cart/index.wxss */
 /* 收货地址 */
-.address_btn{
+
+.address_btn {
   padding: 20rpx 0;
 }
-
+.address_wrap{
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.address_info{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address_phone{
+  flex: 3;
+}
 
 /* 购物车模块 */
-.shop_index .shop_title{
+.shop_index {
+  padding-bottom: 80rpx;
+}
+
+.shop_title {
   padding: 20rpx;
   border-top: 3rpx solid red;
   border-bottom: 3rpx solid red;
   font-size: 35rpx;
 }
-.cart_wrap{
+
+.cart_wrap {
+  box-sizing: border-box;
   display: flex;
   border-bottom: 2rpx solid #E6DFD9;
   height: 220rpx;
   overflow: hidden;
 }
-.cart_wrap .cart_btn{
-  flex: 2;
+
+.cart_wrap .cart_btn {
+  padding: 0 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
-.cart_wrap .cart_image{
+
+.cart_wrap .cart_image {
   flex: 4;
 }
-.cart_wrap .cart_image image{
+
+.cart_wrap .cart_image image {
   width: 220rpx;
   height: 220rpx;
- 
+
 }
-.cart_wrap .cart_content{
+
+.cart_wrap .cart_content {
+  display: flex;
+  padding: 10rpx;
   flex: 8;
 }
+
+.cart_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart_content view {
+  height: 50%;
+}
+
+.cart_content .cart_title {
+  font-size: 30rpx;
+
+}
+
+.cart_content .cart_title .goods_name {
+  overflow: hidden;
+  height: 80rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cart_price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.prices {
+  flex: 1;
+  color: red;
+  font-size: 35rpx;
+}
+
+.prices:before {
+  display: inline;
+  content: "￥";
+}
+
+.noneshop {
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.caozuo {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  font-size: 35rpx;
+  box-sizing: border-box;
+}
+
+.caozuo view {
+  flex: 1;
+  height: 100%;
+}
+
+.caozuo .del,
+.caozuo .add {
+  border: 1rpx solid black;
+  border-radius: 3rpx;
+}
+
+/* 购物车模块 */
+
+/* 底部工具栏 */
+.tool {
+  position: fixed;
+  width: 100%;
+  border-top: 1rpx solid black;
+  padding: 0 10rpx;
+  height: 80rpx;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.tool .tool_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool .control,
+.tool .jiesuan {
+  height: 100%;
+}
+
+.tool .control {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  line-height: 80rpx;
+}
+
+.jiesuan {
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jiesuan .hesuan {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  flex: 5;
+  padding-right: 10rpx;
+  font-size: 25rpx;
+}
+
+.jiesuan .end {
+  flex: 2;
+  text-align: center;
+  background-color: #F55649;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+
+.hesuan .priced {
+  font-size: 30rpx;
+  color: #F55649;
+}
+
+.hesuan .priced::before {
+  display: inline;
+  content: "￥";
+}
+
+/* 底部工具栏 */

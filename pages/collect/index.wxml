@@ -1,2 +1,23 @@
 <!--pages/collect/index.wxml-->
-<text>pages/collect/index.wxml</text>
+<Tabs Tabs="{{Tabs}}" bind:showcase="showcase">
+</Tabs>
+<view wx:if="{{Tabs[0].active}}" class="collect_shop">
+	<view class="collect_wrap" wx:for="{{collect}}" wx:key="index">
+    <navigator url="../goods_detail/index?goods_id={{item.goods_id}}">
+    <view class="collect">
+      <view class="collect_image">
+            <image src="{{item.goods_small_logo}}"></image>
+      </view>
+      <view class="collect_info">
+            <view class="info_title">{{item.goods_name}}</view>
+            <view class="info_price"><text class="price">{{item.goods_price}}</text></view>
+      </view>
+		</view>
+
+    </navigator>
+	  	
+	</view>
+</view>
+<view wx:elif="{{Tabs[1].active}}">1</view>
+<view wx:elif="{{Tabs[2].active}}">2</view>
+<view wx:else="{{Tabs[3].active}}">3</view>

@@ -1,1 +1,133 @@
 /* pages/user/index.wxss */
+/* 背景 */
+
+/* 用户登录 */
+.login_btn button {
+  margin-top: 30rpx;
+}
+
+/* 用户背景 */
+.user_index {
+  position: relative;
+  height: 50vh;
+  text-align: center;
+}
+
+.user_index .bg_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.user_index .bg_wrap .bgicon {
+  width: 100%;
+  height: 100%;
+  filter: blur(10rpx);
+}
+
+.user_index .icon {
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 100rpx;
+  border-radius: 90rpx;
+  box-shadow: 0 0 20rpx #fff;
+}
+
+.user_index .user_name {
+  margin-top: 100rpx;
+  color: #fff;
+  font-size: 40rpx;
+}
+
+.cart_info {
+  position: absolute;
+  width: 90%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -50rpx;
+  border-radius: 10rpx;
+
+}
+
+.cart_index {
+  display: flex;
+  align-items: center;
+  padding: 15rpx;
+  box-sizing: border-box;
+  color: black;
+  font-size: 30rpx;
+}
+
+.cart_index .cart_item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 我的订单 */
+.my_shop {
+  padding-top: 50rpx;
+  background-color: #E9ECE9;
+}
+
+.shop_wrap {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.orders .title {
+  margin-top: 20rpx;
+  padding: 20rpx 0 20rpx 20rpx;
+  border-bottom: 3rpx solid silver;
+  font-size: 35rpx;
+}
+
+.status {
+  display: flex;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.status view image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.status_wrap {
+  flex: 1;
+}
+
+.item {
+  height: 20rpx;
+  background-color: #E9ECE9;
+}
+
+.manage {
+  padding: 20rpx 0 20rpx 20rpx;
+  font-size: 30rpx;
+
+}
+
+.kefu {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.kefu view:nth-of-type(2) {
+  text-align: right;
+}
+
+.kefu,
+.mess,
+.about {
+  border-bottom: 3rpx solid #E9ECE9;
+  padding: 20rpx;
+}

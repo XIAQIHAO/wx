@@ -15,13 +15,17 @@ Page({
    */
   data: {
         goodList:[],
-        curr:false
+        curr:false,
+        fail:'../../images/收藏1.png',
+        suc:'../../images/收藏2.png',
+        collect:[]
   },
     
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  
   let that = this
   this.setData({
     curr:false
@@ -32,9 +36,30 @@ Page({
          url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/detail',
          data:{goods_id},
          success:(res)=>{
-          that.setData({
-              goodList:res.data.message
-          })
+              let collect = wx.getStorageSync('collect')||[];
+              let goodList = res.data.message;
+              console.log(goodList)
+             let index =  collect.findIndex(item=>item.goods_id===goodList.goods_id)
+             console.log(index)
+             if(index == -1){
+                  that.setData({
+                    goodList
+                  })
+                  console.log("没有这个商品")
+             }else{
+                that.setData({
+                  goodList:collect[index]
+                  
+                })
+                console.log("有这个商品")
+             }
+
+
+                that.setData({
+                  collect:collect
+                })
+               
+      
          },
          complete:()=>{
           wx.hideLoading();
@@ -44,7 +69,27 @@ Page({
          }
        })
   },
+//收藏
+    selected(){
+          let goodList = this.data.goodList;
+          let collect = this.data.collect
+          if(!goodList.current){
+            goodList.current = true
+            collect.push(goodList)
+          }else{
+            goodList.current = false;
+            collect.pop(goodList)
+          }
+          this.setData({
+              goodList,
+              collect
+          })
+          wx.setStorageSync("collect",this.data.collect)
+          console.log(this.data.collect)
+        
 
+        
+    },    
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -56,7 +101,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+     
   },
   //预览图片
   btnclick(e){
@@ -74,6 +119,7 @@ Page({
       //购物车为空
       if(index==-1){
           this.data.goodList.num = 1
+          this.data.goodList.checked = true
           cart.push(this.data.goodList)
 
       }else{//已经加入购物车
@@ -87,6 +133,12 @@ Page({
         mask:true,
         icon:'success' 
       })
+  },
+  //跳转到购物车页面
+  gocart(){
+    wx.switchTab({
+      url:"/pages/cart/index"
+    })
   },
   /**
    * 生命周期函数--监听页面隐藏

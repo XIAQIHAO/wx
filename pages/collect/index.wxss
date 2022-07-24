@@ -1,1 +1,46 @@
 /* pages/collect/index.wxss */
+.collect_shop {
+  height: 100vh;
+  background-color: #F2F4F5;
+  border-top: 2rpx solid #F2F4F5;
+}
+
+.collect_wrap {
+    margin: 10rpx;
+  background-color: #fff;
+}
+
+.collect {
+  display: flex;
+}
+.collect .collect_image {
+  flex: 2;
+  height: 180rpx;
+  text-align: center;
+}
+.collect .collect_image image{
+  width: 90%;
+  height: 100%;
+}
+
+.collect .collect_info {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+}
+.collect .collect_info .info_title{
+  height: 80rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+} 
+ .collect_info .info_price .price{
+   color: red;
+ }
+ .info_price .price::before{
+    display: inline;
+    content: "￥";
+
+ }

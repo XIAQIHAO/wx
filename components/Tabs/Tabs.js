@@ -22,8 +22,9 @@ Component({
    */
   methods: {
     changetitle(e){
-      
+     
         this.triggerEvent('showcase',e.target.dataset.index)
+        
     }
   }
 })

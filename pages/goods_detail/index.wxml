@@ -14,7 +14,7 @@
       {{goodList.goods_name}}
       </view>
       <view class="goods_like" wx:if="{{curr}}">
-            <view><image src="../../images/收藏.png"></image></view>
+            <view bindtap="selected"><image src="{{goodList.current?suc:fail}}"></image></view>
             <view>收藏</view>
       </view>
       </view>
@@ -41,9 +41,9 @@
        </view>
         <view class="handle_gouwuche">
         <view class="iconfont icon-gouwuche"></view>
-       <view>
-       
-       购物车</view>
+       <view bindtap="gocart">
+           购物车
+       </view>
         </view>
          <view class="add_shop"><view bindtap="addshop">加入购物车</view></view>
           <view class="buy_shop"><view>立即购买</view></view>

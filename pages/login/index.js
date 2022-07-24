@@ -1,4 +1,6 @@
 // pages/login/index.js
+import runtime from '../../untils/runtime'
+import {getSetting,getUserinfo} from '../../untils/WxAddress'
 Page({
 
   /**
@@ -7,7 +9,27 @@ Page({
   data: {
 
   },
-
+  //登录获取用户信息
+    async login(){
+        try {
+          //获取用户信息
+          let res = await getUserinfo();
+          let userinfo = {} 
+          //提取用户信息，并且储存在本地
+          userinfo.nickName = res.userInfo.nickName;
+          userinfo.avatarUrl = res.userInfo.avatarUrl
+          wx.setStorageSync("user",userinfo)
+  
+         wx.navigateBack({
+          wrl:"../user/index"
+         })
+         
+        } catch (error) {
+              console.log(error)
+        }
+      
+       
+    },  
   /**
    * 生命周期函数--监听页面加载
    */

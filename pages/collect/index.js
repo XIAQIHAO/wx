@@ -4,10 +4,26 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
+  data: { 
+    Tabs:[
+      {index:0,title:"商品收藏",active:true},
+      {index:1,title:"品牌收藏",active:false},
+      {index:2,title:"店铺收藏",active:false},
+      {index:3,title:"品牌收藏",active:false}
+    ],
+    collect:[]
   },
-
+  //子组件向父组件传递事件
+    showcase(e){
+          let i = e.detail;
+          let Tabs = this.data.Tabs
+          Tabs.forEach((item,index,arr)=>{
+                item.active = i==index?true:false
+          })
+          this.setData({
+            Tabs
+          })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +42,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+        this.setData({
+          collect:wx.getStorageSync('collect')
+        })
   },
 
   /**

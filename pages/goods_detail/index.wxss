@@ -53,7 +53,7 @@
   padding-right: 20rpx;
 }
 
-.goods_like image {
+.goods_like view image {
   width: 40rpx;
   height: 40rpx;
 }
