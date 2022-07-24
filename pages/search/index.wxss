@@ -1,1 +1,39 @@
 /* pages/search/index.wxss */
+.search-container{
+  padding-top: 150px;
+}
+.active-privileg{
+  margin: 50px auto;
+  width: 130px;
+  text-align: center;
+  padding: 30rpx 0;
+  border-radius: 10px;
+  background-color: orange;
+  position: relative;
+  animation: rotate .8s .5s ease-out;
+  transform-origin:50% 0;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+.active-privileg::before{
+  position: absolute;
+  top: -10px;
+  content:"";
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent transparent orange transparent;
+  border-style: solid;
+  border-width: 5px;
+}

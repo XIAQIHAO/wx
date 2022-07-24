@@ -6,12 +6,13 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
@@ -105,6 +106,42 @@
 					"id": -1,
 					"name": "收藏页面",
 					"pathName": "pages/collect/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/index",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/index",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "pages/verify_identity/index",
+					"pathName": "pages/verify_identity/index",
+					"query": "phone=17397300191",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/verify_card/index",
+					"pathName": "pages/verify_card/index",
+					"query": "phone=17397300191",
 					"scene": null
 				}
 			]

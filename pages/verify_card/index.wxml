@@ -1,0 +1,10 @@
+<view class="verify-card">
+  <view class="verify-card-header">
+    <text>宁波银行</text>
+  </view>
+  <view class="verify-card-main">
+    <text>卡号</text>
+    <input type="number" placeholder="输入已绑定微信的宁波银行储蓄卡号" bindfocus="getKeyboardHeight" bindblur="setKeyboardHeight"></input>
+  </view>
+  <footer-btn fixedBottomDistance="{{fixedBottomDistance}}"></footer-btn>
+</view>

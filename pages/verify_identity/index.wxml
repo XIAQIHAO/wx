@@ -1,0 +1,25 @@
+<view class="verify-container">
+  <view class="verify-container-header">
+    <view class="container-header-title">验证本人手机号</view>
+    <view class="container-header-desc">
+      验证码已发送至我的手机号<text>1739730****0191</text>
+    </view>
+  </view>
+  <view class="verify-container-mian">
+    <view class="verify-code">
+      <input placeholder="输入验证码" type="number" maxlength="6" bindinput="inputVerifyCode" show-confirm-bar="{{ false }}" bindfocus="getKeyboardHeight" bindblur="setKeyboardHeight">
+      </input>
+      <view class="verify-code-text">
+        <text hidden="{{!verifyCodeCurrent}}" class="code-text-time">{{verifyCodeSecond+'s'}}</text>
+        <text hidden="{{verifyCodeCurrent}}" class="code-text-again" bindtap="getVerifyCode">重新获取</text>
+      </view>
+    </view>
+    <view class="container-mian-tips">
+      <text hidden="{{!verifyCodeTips}}">无法收到验证码?</text>
+      <text class="mian-tips-error" hidden="{{verifyCodeTips}}">验证码错误</text>
+    </view>
+  </view>
+  <view class="verify-container-footer" style="bottom:{{keyboardHeight}}px">
+    <navigator style="display:inline-block" url="../verify_card/index">如手机号无法验证，进行卡号升级></navigator>
+  </view>
+</view>

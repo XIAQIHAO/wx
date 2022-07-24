@@ -1,0 +1,13 @@
+<view class="footer-btn" style="bottom:{{fixedBottomDistance}}px">
+  <view class="btn-agreement">
+    <radio checked="{{argeeStatus}}" bindtap = "onHanderCheck"></radio>
+    <view class="agree-info">
+      <text>阅读并同意</text>
+      <navigator>《腾讯大V卡用户服务协议》</navigator>
+      <navigator>《个人信息使用授权书》</navigator>
+    </view>
+  </view>
+  <view class="btn-confirm">
+    <view bindtap="onHandlerConfirm">确认</view>
+  </view>
+</view>

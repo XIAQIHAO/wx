@@ -1,0 +1,49 @@
+.verify-container{
+  padding: 0 24px;
+  position: relative;
+}
+.verify-container > .verify-container-header > .container-header-title{
+  font-size: 18px;
+  margin: 12px 0;
+}
+.verify-container > .verify-container-header > .container-header-desc{
+  color: rgba(0, 0, 0, .8);
+}
+.verify-container > .verify-container-mian{
+  margin-top: 40px;
+}
+.verify-container-mian > .verify-code{
+  position: relative;
+   border-bottom: 1px solid #eee;
+   margin-bottom: 12px;
+}
+.verify-container-mian > .verify-code > input{
+  height: 50px;
+  line-height: 50px;
+  margin-right: 70px;
+}
+.verify-container-mian > .verify-code > .verify-code-text{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.verify-container > .verify-container-mian > .container-mian-tips{
+  color: rgba(0, 0, 0, .7);
+}
+.verify-code-text > .code-text-time{
+  color: rgba(0, 0, 0, .5);
+}
+.verify-code-text > .code-text-again{
+  color:black;
+}
+.container-mian-tips > .mian-tips-error{
+  color: red;
+}
+.verify-container > .verify-container-footer{
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  text-align: center;
+}

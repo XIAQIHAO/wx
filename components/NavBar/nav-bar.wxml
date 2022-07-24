@@ -1,0 +1,4 @@
+<!--components/NavBar/n.wxml-->
+<view class="nav-bar" style="height:{{navBarHeight}}px;">
+  <view class="nbar-title"><text>{{title}}</text></view>
+</view>

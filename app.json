@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/category/index",
     "pages/goods_list/index",
@@ -13,14 +13,15 @@
     "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
-    "pages/pay/index"
-   
+    "pages/pay/index",
+    "pages/verify_identity/index",
+    "pages/verify_card/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F8554D",
     "navigationBarTitleText": "黑马优购",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -28,28 +29,29 @@
     "selectedColor": "#E80000",
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/home.png",
-      "selectedIconPath": "images/homes.png"
-    },
-    {
-      "pagePath": "pages/category/index",
-      "text": "分类",
-      "iconPath": "./images/select.png",
-      "selectedIconPath": "./images/selects.png"
-    },
-    {
-      "pagePath": "pages/cart/index",
-      "text": "购物车",
-      "iconPath": "./images/gocard.png",
-      "selectedIconPath": "./images/gocard.png"
-    },
-    {
-      "pagePath": "pages/user/index",
-      "text": "我的",
-      "iconPath": "./images/user.png",
-      "selectedIconPath": "./images/users.png"
-    }]
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homes.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "./images/select.png",
+        "selectedIconPath": "./images/selects.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "./images/gocard.png",
+        "selectedIconPath": "./images/gocard.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "./images/user.png",
+        "selectedIconPath": "./images/users.png"
+      }
+    ]
   }
 }

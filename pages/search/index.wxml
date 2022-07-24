@@ -1,2 +1,6 @@
 <!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search-container">
+  <nav-bar></nav-bar>
+  <view class="active-privileg"><text>激活特权</text></view>
+ 
+</view>

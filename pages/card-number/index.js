@@ -1,35 +1,20 @@
-// pages/search/index.js
-
+// pages/card-number/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navTitle:"夏其豪"
+
   },
-  _backMusic(){
-    const myaudio = wx.createInnerAudioContext();
-    myaudio.autoplay = true;
-    myaudio.src = '/images/3wcbq-3go73.mp3'
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this._backMusic()
+
   },
-  getUserProfile(){
-    wx.getUserProfile({
-      desc:"用于完善客户资料",
-      success:(res)=>{
-        console.log(res)
-      },
-      fail:(err)=>{
-        console.log(err)
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -41,6 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
   },
 
   /**

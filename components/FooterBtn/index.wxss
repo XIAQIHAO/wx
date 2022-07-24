@@ -1,0 +1,29 @@
+.footer-btn{
+  position: fixed;
+  width: 100vw;
+  box-sizing: border-box;
+  left: 0;
+}
+.footer-btn > .btn-confirm{
+  padding: 0 30px;
+}
+.footer-btn > .btn-confirm > view{
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: orange;
+  text-align: center;
+  font-size: 18px;
+}
+.footer-btn > .btn-agreement{
+  padding: 0 10px;
+  display: flex;
+  align-items:flex-start;
+  margin-bottom: 10px;
+}
+.footer-btn > .btn-agreement > radio{
+  transform:scale(0.7) translateY(-3px);
+}
+.btn-agreement > .agree-info > navigator{
+  color: orange;
+  display: inline;
+}
